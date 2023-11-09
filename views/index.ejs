@@ -6,6 +6,14 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <a href="/new"><button>New Post</button></a>
+    <ul>
+      <% messages.forEach(function (message) { %>
+        <li><%= message.user %></li>
+        <li><%= message.text %></li>
+        <li><%= message.added %></li>
+      <% }) %>
+    </ul>
+
   </body>
 </html>
